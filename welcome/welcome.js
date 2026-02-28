@@ -98,14 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // "Try it now" button
+  // "Try it now" button — open a real page where the extension works
   tryItBtn.addEventListener('click', () => {
-    // Select the button text to demonstrate the extension
-    const range = document.createRange();
-    range.selectNodeContents(tryItBtn);
-    const selection = window.getSelection();
-    selection.removeAllRanges();
-    selection.addRange(range);
+    chrome.tabs.create({ url: 'https://en.wikipedia.org/wiki/Special:Random' });
   });
 
   function goToStep(step) {
