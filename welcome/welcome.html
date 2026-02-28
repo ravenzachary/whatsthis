@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to What's This?</title>
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="logo">?</div>
+      <h1>What's This?</h1>
+      <p class="tagline">Learn about anything you see on the web — without leaving the page.</p>
+    </header>
+
+    <div id="setupSection" class="card setup-card">
+      <div class="step-indicator">
+        <div class="step active" id="step1dot">1</div>
+        <div class="step-line"></div>
+        <div class="step" id="step2dot">2</div>
+        <div class="step-line"></div>
+        <div class="step" id="step3dot">3</div>
+      </div>
+
+      <div id="step1" class="step-content active">
+        <h2>Step 1: Add your API key</h2>
+        <p>Enter your <a href="https://console.anthropic.com" target="_blank">Anthropic API key</a> to power the AI.</p>
+        <div class="input-group">
+          <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off" />
+          <button id="toggleKey" class="icon-btn" aria-label="Toggle key visibility">👁</button>
+        </div>
+        <button id="nextStep1" class="primary-btn" disabled>Continue</button>
+        <p class="hint">Don't have a key? <a href="https://console.anthropic.com" target="_blank">Get one free from Anthropic</a></p>
+      </div>
+
+      <div id="step2" class="step-content">
+        <h2>Step 2: Choose your response mode</h2>
+        <div class="mode-cards">
+          <label class="mode-card">
+            <input type="radio" name="mode" value="fast" />
+            <div class="mode-inner">
+              <span class="mode-icon">⚡</span>
+              <strong>Fast</strong>
+              <span class="mode-desc">Haiku only — quick answers</span>
+            </div>
+          </label>
+          <label class="mode-card selected">
+            <input type="radio" name="mode" value="balanced" checked />
+            <div class="mode-inner">
+              <span class="mode-icon">⚖️</span>
+              <strong>Balanced</strong>
+              <span class="mode-desc">Quick answer + deeper analysis</span>
+            </div>
+          </label>
+          <label class="mode-card">
+            <input type="radio" name="mode" value="deep" />
+            <div class="mode-inner">
+              <span class="mode-icon">🔬</span>
+              <strong>Deep</strong>
+              <span class="mode-desc">Sonnet only — most thorough</span>
+            </div>
+          </label>
+        </div>
+        <button id="nextStep2" class="primary-btn">Continue</button>
+      </div>
+
+      <div id="step3" class="step-content">
+        <h2>Step 3: You're ready!</h2>
+        <p class="success-msg">Settings saved. Here's how to use What's This?</p>
+
+        <div class="how-to-grid">
+          <div class="how-to-item">
+            <div class="how-icon">📝</div>
+            <div>
+              <strong>Text</strong>
+              <p>Select any text — a word, sentence, or paragraph. A purple bar appears; wait 1 second and the answer pops up. Or right-click and choose "What's This?"</p>
+            </div>
+          </div>
+          <div class="how-to-item">
+            <div class="how-icon">🖼️</div>
+            <div>
+              <strong>Images</strong>
+              <p>Hover over any image for 1.5 seconds — a pulsing ring appears, then analysis begins. Point at a specific detail to learn about that exact thing.</p>
+            </div>
+          </div>
+          <div class="how-to-item">
+            <div class="how-icon">🎬</div>
+            <div>
+              <strong>Video</strong>
+              <p>Right-click a video and choose "What's This? (Video Frame)" to analyze the current frame.</p>
+            </div>
+          </div>
+          <div class="how-to-item">
+            <div class="how-icon">💬</div>
+            <div>
+              <strong>Follow-ups</strong>
+              <p>Ask up to 4 follow-up questions in each popover to dig deeper into any topic.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="shortcuts">
+          <strong>No keyboard needed!</strong> Just select text or hover over images and videos.
+          <span class="shortcuts-optional">Optional shortcuts: <kbd>F2</kbd> or <kbd id="modKey">Cmd</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span>
+        </div>
+
+        <button id="tryIt" class="primary-btn try-btn">Try it now — select this text!</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Built with Claude Code + Anthropic API at the Claude Code Meetup Portland Hackathon on 28 February 2026 by Raven Zachary (and Claude!)</p>
+    </footer>
+  </div>
+
+  <script src="welcome.js"></script>
+</body>
+</html>

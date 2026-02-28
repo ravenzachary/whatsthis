@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>What's This? Settings</title>
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <span class="logo">?</span>
+      <h1>What's This?</h1>
+    </div>
+
+    <div id="usageStats" class="usage-stats">
+      <div class="stat">
+        <span class="stat-value" id="queriesToday">0</span>
+        <span class="stat-label">Today</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalQueries">0</span>
+        <span class="stat-label">All Time</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="label" for="apiKey">Anthropic API Key</label>
+      <div class="input-row">
+        <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off" />
+        <button id="toggleKey" class="icon-btn" title="Show/hide key" aria-label="Toggle API key visibility">👁</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="label" for="modelPref">Response Mode</label>
+      <select id="modelPref">
+        <option value="fast">Fast (Haiku only)</option>
+        <option value="balanced" selected>Balanced (Haiku + Sonnet)</option>
+        <option value="deep">Deep (Sonnet only)</option>
+      </select>
+    </div>
+
+    <div class="btn-row">
+      <button id="save" class="save-btn">Save Settings</button>
+      <button id="testKey" class="test-btn">Test Key</button>
+    </div>
+    <div id="status" class="status"></div>
+
+    <div class="divider"></div>
+
+    <div class="links">
+      <a href="#" id="historyLink">View Query History</a>
+    </div>
+
+    <div class="footer">
+      <p>Select text or right-click images, then choose <strong>"What's This?"</strong> from the context menu.</p>
+      <p class="shortcut">Or just <strong>hover</strong> an image / <strong>select text</strong> and wait</p>
+      <p class="shortcut">Keyboard: <kbd>F2</kbd> or <kbd id="modSymbol">⌘</kbd><kbd>Shift</kbd><kbd>U</kbd></p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
