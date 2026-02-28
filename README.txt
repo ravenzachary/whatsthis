@@ -1,12 +1,9 @@
 What's This? — Chrome Extension
 ================================
 
-A browser extension to learn about the people, places, and things
-you encounter while browsing the web — without leaving the page.
+A browser extension to learn about the people, places, and things you encounter while browsing the web — without leaving the page.
 
-Built by Raven Zachary (and Claude!) at the Claude Code Meetup
-Portland Hackathon on 28 February 2026.
-
+Built by Raven Zachary (and Claude!) at the Claude Code Meetup Portland Hackathon on 28 February 2026.
 
 INSTALL (30 seconds)
 --------------------
@@ -19,9 +16,7 @@ INSTALL (30 seconds)
 
 4. Click "Load unpacked" → select the unzipped folder
 
-5. A Welcome page opens automatically — enter your Anthropic
-   API key and you're ready to go!
-
+5. A Welcome page opens automatically — enter your Anthropic API key and you're ready to go!
 
 HOW TO USE
 ----------
@@ -34,12 +29,10 @@ Just browse normally:
 
 No keyboard shortcuts needed. It just works.
 
-
 NEED AN API KEY?
 ----------------
 
-Get one free at: https://console.anthropic.com
-
+Get one at: https://console.anthropic.com
 
 SOURCE CODE
 -----------
